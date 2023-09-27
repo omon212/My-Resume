@@ -11,11 +11,12 @@
         <p>{{ news.text }}</p>
         <p>{{ news.time_create }}</p>
         <p>Author: {{ news.autor }}</p>
+
         <img src="{{ news.photo.url }}" alt="News Photo">
     </li>
-    {% empty %}
-    <li>No news available</li>
     {% endfor %}
 </ul>
+
+
 </body>
 </html>
