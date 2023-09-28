@@ -1,9 +1,4 @@
-from django.test import TestCase
-#
-# # Create your tests here.
-
-
-# Define the Morse code dictionary
+# from django.test import TestCase
 # morse_code_dict = {
 #     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 'I': '..',
 #     'J': '.---',
@@ -49,3 +44,40 @@ from django.test import TestCase
 # print("Input Text:", input_text)
 # print("Encoded Text:", encoded_text)
 # print("Decoded Text:", decoded_text)
+
+
+
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+from_email = 'raimkulovomon@gmail.com'
+email_password = 'yfkf zvzh lfzg kklw'
+to_email = 'omonnuloraimkulov@gmail.com'
+subject = 'Qanday garang opcham'
+message = 'siz kop gapirovirmang dovdirginam'
+
+msg = MIMEMultipart()
+msg['From'] = from_email
+msg['To'] = to_email
+msg['Subject'] = subject
+
+msg.attach(MIMEText(message, 'plain'))
+
+smtp_server = 'smtp.gmail.com'
+smtp_port = 587
+try:
+    server = smtplib.SMTP(smtp_server, smtp_port)
+
+    server.starttls()
+
+    server.login(from_email, email_password)
+
+    server.sendmail(from_email, to_email, msg.as_string())
+    print('Email sent successfully!')
+
+except Exception as e:
+    print('Email could not be sent. Error:', str(e))
+
+finally:
+    server.quit()
