@@ -51,11 +51,11 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from_email = 'raimkulovomon@gmail.com'
-email_password = 'yfkf zvzh lfzg kklw'
-to_email = 'omonnuloraimkulov@gmail.com'
-subject = 'Qanday garang opcham'
-message = 'siz kop gapirovirmang dovdirginam'
+from_email = 'raimkulovomonullo@gmail.com'
+email_password = 'rnws ooxo hpji txkl'
+to_email = 'shokiryahyo@gmail.com'
+subject = 'asdgsdg'
+message = 'asdgsadga'
 
 msg = MIMEMultipart()
 msg['From'] = from_email

@@ -4,18 +4,22 @@
     <title>News</title>
 </head>
 <body>
-<h1>News</h1>
-<ul>
-    {% for news in news_objects %}
-    <li>
-        <p>{{ news.text }}</p>
-        <p>{{ news.time_create }}</p>
-        <p>Author: {{ news.autor }}</p>
+<link rel="stylesheet" href="../static/assets/css/new.css">
 
-        <img src="{{ news.photo.url }}" alt="News Photo">
-    </li>
-    {% endfor %}
-</ul>
+
+
+<div class="container">
+    {% for news in news_objects %}
+<li>
+    <p class="text">Text: {{ news.text }}</p>
+    <p>Time: {{ news.time_create }}</p>
+    <p>Author: {{ news.autor }}</p>
+
+    <img  class="new_img" src="{{ news.photo.url }}" alt="News Photo">
+</li>
+{% endfor %}
+</div>
+
 
 
 </body>
