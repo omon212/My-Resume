@@ -15,4 +15,5 @@ def news(request):
 
     return render(request, 'news.html', {'news_objects': news_objects})
 
+
 # Create your views here.
