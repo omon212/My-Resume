@@ -25,4 +25,4 @@ urlpatterns = [
                   path('', include('UZBnews.urls')),
 
                   # path('', views.index, name='index'),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
